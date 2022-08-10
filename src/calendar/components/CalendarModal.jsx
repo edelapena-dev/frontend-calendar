@@ -11,6 +11,7 @@ import { addHours, differenceInSeconds } from 'date-fns';
 import es from 'date-fns/locale/es';
 import { useUiStore } from '../../hooks/useUiStore';
 import { useCalendarStore } from '../../hooks';
+import { getEnvVariables } from '../../helpers';
 registerLocale('es', es)
 
 const customStyles = {
@@ -24,7 +25,10 @@ const customStyles = {
     },
   };
 
-Modal.setAppElement("#root");
+//*Se agrega esta validacion por que en test arroja error  
+if( getEnvVariables().VITE_MODE !== 'test'){
+    Modal.setAppElement("#root");
+}
 
 export const CalendarModal = () => {
 

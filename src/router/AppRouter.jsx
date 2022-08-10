@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom"
 import { LoginPage } from "../auth";
 import { CalendarPage } from "../calendar";
-import { useAuthStore, useCalendarStore } from "../hooks";
+import { useAuthStore } from "../hooks";
 
 export const AppRouter = () => {
     
