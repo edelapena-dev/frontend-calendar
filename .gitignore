@@ -1,5 +1,7 @@
 #variable entorno
 .env
+.env.production
+.env.test
 
 # Logs
 logs
